@@ -51,7 +51,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm text-accent px-4 py-2 rounded-full mb-8 border border-accent/30"
           >
             <Zap size={18} className="animate-pulse" />
-            <span className="font-semibold text-sm uppercase tracking-wider">+30 anos de experiência</span>
+            <span className="font-semibold text-sm uppercase tracking-widest">+30 anos de experiência</span>
           </motion.div>
 
           {/* Title */}
@@ -103,21 +103,21 @@ const Hero = () => {
                 <Zap className="text-accent" size={20} />
                 <span className="font-display text-3xl md:text-4xl text-primary-foreground">12+</span>
               </div>
-              <span className="text-primary-foreground/60 text-sm uppercase tracking-wide">Atrações</span>
+              <span className="text-primary-foreground/60 text-sm uppercase tracking-wider">Atrações</span>
             </div>
             <div className="text-center border-x border-primary-foreground/20">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Shield className="text-accent" size={20} />
                 <span className="font-display text-3xl md:text-4xl text-primary-foreground">100%</span>
               </div>
-              <span className="text-primary-foreground/60 text-sm uppercase tracking-wide">Segurança</span>
+              <span className="text-primary-foreground/60 text-sm uppercase tracking-wider">Segurança</span>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Users className="text-accent" size={20} />
                 <span className="font-display text-3xl md:text-4xl text-primary-foreground">500+</span>
               </div>
-              <span className="text-primary-foreground/60 text-sm uppercase tracking-wide">Eventos</span>
+              <span className="text-primary-foreground/60 text-sm uppercase tracking-wider">Eventos</span>
             </div>
           </motion.div>
         </motion.div>

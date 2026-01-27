@@ -39,7 +39,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block text-primary font-bold uppercase tracking-wider text-sm mb-4">
+            <span className="inline-block text-primary font-bold uppercase tracking-widest text-sm mb-4">
               Sobre a Team Extreme
             </span>
             <h2 className="section-title text-foreground mb-6">
@@ -87,7 +87,7 @@ const About = () => {
               href="#contato"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-extreme-blue-dark transition-colors duration-300"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-extreme-blue-dark transition-colors duration-300"
             >
               Saiba Mais
             </motion.a>
