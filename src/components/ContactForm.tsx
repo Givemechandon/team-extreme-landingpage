@@ -183,7 +183,7 @@ const ContactForm = () => {
                 <Instagram className="text-accent" size={22} />
               </a>
               <a
-                href="https://www.facebook.com/teamextremesports"
+                href="https://web.facebook.com/teamextremesportsmkt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center hover:bg-accent/20 transition-colors"

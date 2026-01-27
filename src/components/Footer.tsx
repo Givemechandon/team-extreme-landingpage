@@ -73,7 +73,7 @@ const Footer = () => {
                 <Instagram className="text-accent" size={18} />
               </a>
               <a
-                href="https://www.facebook.com/teamextremesports"
+                href="https://web.facebook.com/teamextremesportsmkt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center hover:bg-accent/20 transition-colors"
