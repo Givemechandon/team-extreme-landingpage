@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -17,13 +18,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-extreme-dark/95 backdrop-blur-md border-b border-primary/20">
       <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0">
             <img
               src={logo}
               alt="Team Extreme"
-              className="h-16 md:h-20 w-auto"
+              className="h-32 md:h-36 w-auto"
             />
           </a>
 
@@ -43,10 +44,12 @@ const Header = () => {
 
           {/* CTA Button */}
           <a
-            href="#contato"
+            href="https://wa.me/5511955506239"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-bold uppercase text-sm tracking-wide hover:bg-extreme-yellow-light transition-all duration-300 hover:scale-105"
           >
-            <Phone size={18} />
+            <FaWhatsapp size={18} />
             Solicitar Orçamento
           </a>
 
@@ -83,11 +86,13 @@ const Header = () => {
                 ))}
                 <li className="px-4 pt-2">
                   <a
-                    href="#contato"
+                    href="https://wa.me/5511955506239"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-lg font-bold uppercase text-sm tracking-wide"
                   >
-                    <Phone size={18} />
+                    <FaWhatsapp size={18} />
                     Solicitar Orçamento
                   </a>
                 </li>

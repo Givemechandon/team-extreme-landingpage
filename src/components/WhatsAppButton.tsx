@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = () => {
   const phoneNumber = "5511955506239";
@@ -31,7 +31,7 @@ const WhatsAppButton = () => {
           ease: "easeInOut",
         }}
       >
-        <MessageCircle size={32} fill="white" />
+        <FaWhatsapp size={32} />
       </motion.div>
       
       {/* Pulse ring */}

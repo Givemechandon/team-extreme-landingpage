@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Zap, Shield, Users } from "lucide-react";
-import heroBg from "@/assets/hero-bg-new.png";
+import heroVideo from "@/assets/IMG_7877.mp4";
 
 const Hero = () => {
   return (
@@ -8,14 +8,18 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat contrast-110"
-        style={{ backgroundImage: `url(${heroBg})` }}
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover contrast-110"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-hero-pattern opacity-70" />
+      <div className="absolute inset-0 bg-hero-pattern opacity-80" />
       
       {/* Animated shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -51,7 +55,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Title */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground uppercase leading-none mb-6">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground uppercase leading-tight md:leading-none mb-6 px-2">
             Locações{" "}
             <span className="text-accent">Radicais</span>
             <br />
@@ -59,17 +63,20 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-primary-foreground/90 text-lg md:text-md max-w-2xl mx-auto mb-10 leading-relaxed">
-          Transforme seu evento Corporativo em uma experiência inesquecível com Equipamentos de alta qualidade e uma equipe altamente qualificada.
+          <p className="text-primary-foreground/90 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed px-2">
+            Transforme seu evento corporativo em uma experiência inesquecível com
+            equipamentos de alta qualidade e uma equipe altamente qualificada.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 sm:mb-16 px-2">
             <motion.a
-              href="#contato"
+              href="https://wa.me/5511955506239"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-extreme animate-pulse-glow"
+              className="btn-extreme animate-pulse-glow text-sm sm:text-base md:text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Zap size={20} />
               Quero locar equipamentos para meu evento!
@@ -89,7 +96,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto px-2"
           >
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
