@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { Zap } from "lucide-react";
 
 const WhatsAppButton = () => {
   const phoneNumber = "5511955506239";

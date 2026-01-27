@@ -18,13 +18,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-extreme-dark/95 backdrop-blur-md border-b border-primary/20">
       <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-20 md:h-24">
+        <nav className="flex items-center justify-between h-28 md:h-32">
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0">
             <img
               src={logo}
               alt="Team Extreme"
-              className="h-32 md:h-36 w-auto"
+              className="h-40 md:h-48 w-auto"
             />
           </a>
 
