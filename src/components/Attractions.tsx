@@ -16,6 +16,8 @@ import {
   CircleDot
 } from "lucide-react";
 
+import { FaWhatsapp } from "react-icons/fa";
+
 const exclusiveAttractions = [
   { icon: Sparkles, name: "Giro Master", description: "Giros 360° de pura emoção" },
   { icon: Zap, name: "Aero Surf Extreme", description: "Exclusivo balanço radical" },
@@ -132,7 +134,7 @@ const Attractions = () => {
               <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                 <attraction.icon className="text-accent" size={24} />
               </div>
-              <h3 className="font-bold text-primary-foreground text-sm mb-2 leading-snug line-clamp-1">
+              <h3 className="font-bold text-primary-foreground text-sm mb-2 leading-snug line-clamp-1 tracking-widest">
                 {attraction.name}
               </h3>
               <p className="text-primary-foreground/60 text-xs leading-snug line-clamp-2">
@@ -150,9 +152,12 @@ const Attractions = () => {
           className="text-center mt-12"
         >
           <a
-            href="#contato"
+            href="https://wa.me/5511955506239"
             className="btn-extreme"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <FaWhatsapp size={18} />
             Solicitar Orçamento
           </a>
         </motion.div>
