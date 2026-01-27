@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+
+    --primary: 204 91% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 96% 54%;
+    --secondary-foreground: 210 50% 10%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 20% 40%;
+
+    --accent: 42 96% 54%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 204 91% 38%;
+
+    --radius: 0.75rem;
+
+    /* Custom Team Extreme tokens */
+    --extreme-blue: 204 91% 38%;
+    --extreme-blue-dark: 204 91% 28%;
+    --extreme-yellow: 42 96% 54%;
+    --extreme-yellow-light: 42 96% 64%;
+    --extreme-dark: 210 50% 8%;
+    --extreme-gray: 210 20% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(204 91% 38%) 0%, hsl(204 91% 28%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(42 96% 54%) 0%, hsl(42 96% 44%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(204 91% 20% / 0.9) 0%, hsl(204 91% 10% / 0.95) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(210 50% 8%) 0%, hsl(210 50% 12%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(204 91% 38% / 0.1);
+    --shadow-button: 0 4px 14px hsl(42 96% 54% / 0.4);
+    --shadow-hover: 0 8px 30px hsl(204 91% 38% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 50% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 204 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 96% 54%;
+    --secondary-foreground: 210 50% 10%;
+
+    --muted: 210 30% 18%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 42 96% 54%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 204 91% 50%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-extreme {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold uppercase tracking-wider 
+           bg-accent text-accent-foreground rounded-lg transition-all duration-300 
+           hover:scale-105 hover:shadow-[var(--shadow-button)];
+  }
+
+  .btn-extreme-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold uppercase tracking-wider 
+           border-2 border-primary-foreground text-primary-foreground rounded-lg transition-all duration-300 
+           hover:bg-primary-foreground hover:text-primary;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
+  }
+
+  .card-extreme {
+    @apply bg-card rounded-xl overflow-hidden shadow-[var(--shadow-card)] 
+           transition-all duration-300 hover:shadow-[var(--shadow-hover)] hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-[var(--gradient-hero)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--extreme-blue-dark));
+}
+
+/* Hide Lovable badge */
+#lovable-badge {
+  display: none !important;
+}
