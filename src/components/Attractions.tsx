@@ -134,7 +134,7 @@ const Attractions = () => {
               <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
                 <attraction.icon className="text-accent" size={24} />
               </div>
-              <h3 className="font-bold text-primary-foreground text-sm mb-2 leading-snug line-clamp-1 tracking-widest">
+              <h3 className="font-bold text-primary-foreground text-sm mb-2 leading-snug line-clamp-1 tracking-[0.25em] uppercase">
                 {attraction.name}
               </h3>
               <p className="text-primary-foreground/60 text-xs leading-snug line-clamp-2">
