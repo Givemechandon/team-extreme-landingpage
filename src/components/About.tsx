@@ -112,7 +112,7 @@ const About = () => {
                   <feature.icon className="text-primary" size={28} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground text-lg mb-2">{feature.title}</h3>
+                  <h3 className="font-bold text-foreground text-lg mb-2 tracking-widest">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </div>
               </motion.div>
