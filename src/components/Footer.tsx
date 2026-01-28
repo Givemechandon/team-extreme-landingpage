@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Logo & Description */}
           <div>
-            <img src={logo} alt="Team Extreme" className="h-14 mb-4" />
+            <img src={logo} alt="Team Extreme" className="h-28 md:h-32 mb-4" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
               A Team Extreme é pura emoção a favor do seu evento.
               Alugamos, levamos e operamos atrações radicais com mais de 30 anos de experiência.

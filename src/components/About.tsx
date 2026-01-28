@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, Shield, Users, CheckCircle } from "lucide-react";
+import bungeeJump from "@/assets/gallery/bungee-jump.png";
+import bungeeShot from "@/assets/gallery/bungee-shot.png";
 
 const features = [
   {
@@ -55,6 +57,34 @@ const About = () => {
               revolucionamos o mercado de promoção, onde sua empresa, marca ou produto 
               está presente em eventos onde o público vivencia muita emoção com inovadoras atrações radicais.
             </p>
+
+            {/* Bungee images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+                className="overflow-hidden rounded-xl shadow-md"
+              >
+                <img
+                  src={bungeeJump}
+                  alt="Bungee Jump em ação"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7 }}
+                className="overflow-hidden rounded-xl shadow-md"
+              >
+                <img
+                  src={bungeeShot}
+                  alt="Bungee Shot em evento"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover"
+                />
+              </motion.div>
+            </div>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
               Importante: <strong className="text-foreground">não somos um espaço de locação</strong>. Nós
