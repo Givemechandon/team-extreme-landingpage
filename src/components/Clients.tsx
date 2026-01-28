@@ -1,15 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import playcenterLogo from "@/assets/playcenter.png";
+import skolLogo from "@/assets/skol.png";
+import sundownLogo from "@/assets/sundown.png";
+import nescauLogo from "@/assets/nescau.png";
+import pepsiLogo from "@/assets/pepsi.png";
+import jeepLogo from "@/assets/jeep.png";
+import amstelLogo from "@/assets/amstel.png";
 
 const clients = [
-  "Playcenter",
-  "Skol",
-  "Sundown",
-  "Nescau",
-  "Pepsi",
-  "Jeep",
-  "Amstel",
+  { name: "Playcenter", logo: playcenterLogo },
+  { name: "Skol", logo: skolLogo },
+  { name: "Sundown", logo: sundownLogo },
+  { name: "Nescau", logo: nescauLogo },
+  { name: "Pepsi", logo: pepsiLogo },
+  { name: "Jeep", logo: jeepLogo },
+  { name: "Amstel", logo: amstelLogo },
 ];
 
 const Clients = () => {
@@ -48,11 +55,13 @@ const Clients = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.1 }}
-              className="px-6 py-4 bg-muted rounded-lg border border-border hover:border-primary/50 transition-colors duration-300"
+              className="px-8 py-5 bg-extreme-blue-dark rounded-lg border border-primary/40 hover:bg-extreme-blue-dark transition-colors duration-300"
             >
-              <span className="font-display text-xl md:text-2xl text-muted-foreground hover:text-primary transition-colors">
-                {client}
-              </span>
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-14 md:h-20 object-contain mx-auto"
+              />
             </motion.div>
           ))}
         </motion.div>
