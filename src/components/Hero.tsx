@@ -55,7 +55,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Title */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-foreground uppercase leading-tight md:leading-none mb-6 px-2">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-7xl lg:text-8xl text-primary-foreground uppercase leading-tight md:leading-none mb-6 px-2">
             Locações{" "}
             <span className="text-accent">Radicais</span>
             <br />
@@ -96,7 +96,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto px-2"
+            className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto px-2"
           >
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
