@@ -150,35 +150,39 @@ const About = () => {
             ))}
 
             {/* Director highlight */}
-            <motion.div
+                        {/* Director highlight */}
+                        <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.85, duration: 0.6 }}
-              className="bg-primary p-6 md:p-8 rounded-xl text-primary-foreground"
+              className="bg-primary p-4 md:p-6 rounded-md text-primary-foreground 
+                         flex flex-col items-center justify-center 
+                         max-w-sm md:max-w-md mx-auto"
             >
-              <p className="text-sm uppercase tracking-wider mb-2 text-primary-foreground/70">Sócio-Diretor</p>
-              <p className="font-bold text-xl md:text-2xl mb-4">Mário Mendes</p>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.9, duration: 0.5 }}
-                className="mb-4 overflow-hidden rounded-xl flex items-center justify-center bg-primary-foreground/10 p-2"
-              >
-                <img
-                  src={marioPhoto}
-                  alt="Mário Mendes - Sócio-Diretor Team Extreme"
-                  className="w-full max-h-64 md:max-h-80 object-contain rounded-xl"
-                />
-              </motion.div>
-              <p className="text-primary-foreground/80 text-sm leading-relaxed">
+              <p className="text-sm uppercase tracking-wider mb-2 text-primary-foreground/70">
+                Sócio-Diretor
+              </p>
+
+              <p className="font-bold text-xl md:text-2xl mb-4">
+                Mário Mendes
+              </p>
+
+              <img
+                src={marioPhoto}
+                alt="Mário Mendes - Sócio-Diretor Team Extreme"
+                className="w-48 md:w-56 max-h-64 object-contain rounded-md mb-4"
+              />
+
+              <p className="text-primary-foreground/80 text-sm leading-relaxed text-center">
                 Certificado de Operation Master desde 1997 pela Adrenalin Dream Adventure (A.D.A./U.S.A.)
               </p>
             </motion.div>
-          </motion.div>
+
+          </motion.div> {/* ← FECHAMENTO DO RIGHT COLUMN */}
         </div>
       </div>
     </section>
   );
 };
-
 export default About;
+
