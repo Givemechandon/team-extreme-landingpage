@@ -16,7 +16,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-extreme-dark/95 backdrop-blur-md border-b border-primary/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0370b9] backdrop-blur-md border-b border-primary/20">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
